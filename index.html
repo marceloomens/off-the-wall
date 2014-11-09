@@ -2,22 +2,32 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section class="homepage">
+	
+	<!-- Section Title with Teaser -->
+	<div id="section-title">
+		<div id="teaser" class="teaser-no-title">
+			<p>Boxter is a modern and minimal HTML5 Template ideal for the photographer, the agency or the creative freelancer. Have a look around and discover the many cool features.</p>
+		</div>
+	</div>
+	<!-- Section Title with Teaser End -->
+		
+	<section class="pages clearfix">
+		<div class="column_one_third">
+			<h6>Beautiful Design</h6>
+			<blockquote class="overlayed">
+				<p>I’ve learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.</p>
+				<p class="blockquote_cite">&#8211;Maya Angelou</p>
+			</blockquote>
+		</div>
+		<div class="column_one_third">
+			<h6>Unlimited Skins</h6>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+		</div>
+		<div class="column_one_third last">
+			<h6>Easily Customizable</h6>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+		</div>
+		<div class="clear"></div>
+	</section>
+</section>
