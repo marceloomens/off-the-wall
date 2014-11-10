@@ -3,10 +3,10 @@
 	<div class="column_one_third column-footer-widget">
 		<ul class="footer-widget">
 			<li class="widget widget_text">
-				<h4 class="widget-title">Boxter HTML Template</h4>
+				<h4 class="widget-title">About us</h4>
 				<div class="textwidget">
-					<p>Brooklyn HTML Template is a fully responsive HTML5 template ideal for designers, photo studios and freelancers.</p>
-					<p>It offers a full width and fixed with portfolio grid, awesome hover effects, full width sliders with fullscreen & touch support, fullscreen backgrounds, fashionable captions and tons of professional styling options.</p>
+					<p>Discover the hidden hutongs and learn about the Chinese with Off the Wall Tours of Beijing.</p>
+					<p><a href="about.html">Read more&nbsp;&rarr;</a></p>
 				</div>
 			</li>
 		</ul>
@@ -15,28 +15,14 @@
 	<div class="column_one_third column-footer-widget">
 		<ul class="footer-widget">
 			<li class="widget widget_recent_entries">
-				<h4 class="widget-title">Recent Posts</h4>
+				<h4 class="widget-title">Updates</h4>
 				<ul>
+    				{% for post in site.posts offset: 0 limit: 5 %}
 					<li>
-						<a href="blog/a-vimeo-post.html">New York Biotopes Vimeo Video Post</a>
-						<span class="post-date">November 27, 2013</span>
+						<a href="{{ post.url }}">{{ post.title }}</a>
+						<span class="post-date">{{ post.date | date_to_string }}</span>
 					</li>
-					<li>
-						<a href="blog/a-sticky-post.html">A Sticky Post with an Awesome Slider</a>
-						<span class="post-date">November 26, 2013</span>
-					</li>
-					<li>
-						<a href="blog/a-youtube-post.html">A Super Cool YouTube Video Post</a>
-						<span class="post-date">November 26, 2013</span>
-					</li>
-					<li>
-						<a href="blog/paginated-post.html">Paginated Post</a>
-						<span class="post-date">November 26, 2013</span>
-					</li>
-					<li>
-						<a href="blog/photo-post.html">Photo Post</a>
-						<span class="post-date">November 26, 2013</span>
-					</li>
+                    {% endfor %}
 				</ul>
 			</li>
 		</ul>
@@ -45,13 +31,9 @@
 	<div class="column_one_third column-footer-widget last">
 		<ul class="footer-widget">
 			<li class="widget widget_text">
-				<h4 class="widget-title">Let's Collaborate</h4>
+				<h4 class="widget-title">Contact</h4>
 				<div class="textwidget">
-					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					<p>Tel: +1 55 65 15 45 85<br />
-					Fax:+1 65 98 56 45 45<br />
-					Mail: <a href="mailto:info@udthemes.com">info@udthemes.com</a><br />
-					NY 5th Avenue, Brooklyn, NY.</p>
+					<p>Mirella Coolen<br />Beijing, China<br />Tel. +86 138 1104 4827<br /><a href="mailto:offthewallbeijing@hotmail.com">offthewallbeijing@hotmail.com</a></p>
 				</div>
 			</li>
 		</ul>

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<section class="portfolio">
+
+	<!-- Section Title -->
+	<div id="section-title">
+		<h1>Gallery</h1>
+	</div>
+	<!-- Section Title End -->
+
+</section>
+
+<section class="portfolio-full-width-grid">
+	
+	<!-- Portfolio Filter -->
+	<div class="portfolio-filter-wrapper">
+		<a href="#" title="All" data-category-slug="all" class="active">All</a>
+		<a href="#" title="Beijing by bike" data-category-slug="bike">Beijing by bike</a>
+		<a href="#" title="Urbanization" data-category-slug="urban">Urbanization</a>
+		<a href="#" title="798 art district" data-category-slug="art">798 art district</a>
+		<a href="#" title="Hutongs on foot" data-category-slug="hutongs">Hutongs on foot</a>
+		<a href="#" title="Summer Palace" data-category-slug="summerpalace">Summer Palace</a>
+		<a href="#" title="Group tours" data-category-slug="groups">Group tours</a>
+	</div>
+	<div id="grid" class="clearfix">
+        {% for photo in site.gallery %}
+		<div class="thumb" data-project-categories="{{ photo.categories }}">
+			<a href="images/gallery/{{ photo.filename }}" class="lightbox" title="{{ photo.title }}" data-caption="{{ photo.title }}">
+				<img src="images/gallery/{{ photo.thumbnail }}" alt="{{ photo.title }}">
+			</a>
+		</div>
+		<div class="fancybox-html">
+    		<h3>{{ photo.title }}</h3>
+            <p>{{ photo.description }}</p>
+		</div>
+        {% endfor %}
+	</div>
+	<!-- Portfolio Index Grid End -->
+
+</section>
