@@ -14,11 +14,20 @@
 	<nav id="primary-nav">
 		<div class="menu-main-menu-container">
 			<ul id="menu-main-menu" class="menu">
-				<li class="menu-item current-menu-item current_page_item"><a href="index.html">Home</a></li>
+
+  {% for node in site.pages %}
+    {% if page.url == node.url %}
+      <li class="menu-item current-menu-item current_page_item"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+    {% else %}
+      <li class="menu-item"><a href="{{node.url}}">{{node.title}}</a></li>
+    {% endif %}
+  {% endfor %}
+
+				<!-- li class="menu-item current-menu-item current_page_item"><a href="index.html">Home</a></li>
 				<li class="menu-item"><a href="about.html">About</a></li>
 				<li class="menu-item"><a href="tours.html">Tours</a></li>
 				<li class="menu-item"><a href="gallery.html">Gallery</a></li>
-				<li class="menu-item"><a href="contact.html">Contact</a></li>
+				<li class="menu-item"><a href="contact.html">Contact</a></li -->
 			</ul>
 		</div>
 	</nav>
