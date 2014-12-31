@@ -1,3 +1,11 @@
-#header-wrapper, #footer-wrapper {
-    background: rgba(0,0,0,0.5);
+#footer-wrapper,
+#header-wrapper {
+    background: rgba(0,0,0,0.9);
+}
+#content-wrapper div.post,
+#content-wrapper section.homepage,
+#content-wrapper section.pages,
+#content-wrapper section.portfolio,
+#content-wrapper section.portfolio-full-width-grid {
+    background: rgba(255,255,255,0.9);
 }

@@ -1,21 +1,8 @@
 <footer>
-		
-	<div class="column_one_third column-footer-widget">
-		<ul class="footer-widget">
-			<li class="widget widget_text">
-				<h4 class="widget-title">About us</h4>
-				<div class="textwidget">
-					<p>Discover the hidden hutongs and learn about the Chinese with Off the Wall Tours of Beijing.</p>
-					<p><a href="about.html">Read more&nbsp;&rarr;</a></p>
-				</div>
-			</li>
-		</ul>
-	</div>
-
 	<div class="column_one_third column-footer-widget">
 		<ul class="footer-widget">
 			<li class="widget widget_recent_entries">
-				<h4 class="widget-title">Updates</h4>
+				<h4 class="widget-title">Upcoming tours</h4>
 				<ul>
     				{% for post in site.posts offset: 0 limit: 5 %}
 					<li>
@@ -24,6 +11,18 @@
 					</li>
                     {% endfor %}
 				</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div class="column_one_third column-footer-widget">
+		<ul class="footer-widget">
+			<li class="widget widget_text">
+				<h4 class="widget-title">About us</h4>
+				<div class="textwidget">
+					<p>After exploring the hidden places of Beijing with me, you'll know why we need to step over a beam when entering a courtyard.</p>
+					<p>Discover the hidden hutongs and learn about the Chinese with Off the Wall Tours of Beijing. <a href="about.html">Read more&nbsp;&rarr;</a></p>
+				</div>
 			</li>
 		</ul>
 	</div>
