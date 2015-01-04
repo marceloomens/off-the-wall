@@ -8,26 +8,76 @@
 	</div>
 
 	<!-- Mobile Menu Toggle -->
-	<div class="mobileMenuToggle"><a href=""></a></div>
+	<div class="mobileMenuToggle"><a href="/"></a></div>
 
 	<!-- Navigation -->
 	<nav id="primary-nav">
 		<div class="menu-main-menu-container">
 			<ul id="menu-main-menu" class="menu">
+    			
+            {% if page.title == "Home" %}
+                <li class="menu-item current-menu-item current_page_item"><a href="/index.html" class="active">Home</a></li>
+            {% else %}
+                <li class="menu-item"><a href="/index.html">Home</a></li>
+            {% endif %}
 
-  {% for node in site.pages %}
-    {% if page.url == node.url %}
-      <li class="menu-item current-menu-item current_page_item"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
-    {% else %}
-      <li class="menu-item"><a href="{{node.url}}">{{node.title}}</a></li>
-    {% endif %}
-  {% endfor %}
+            {% if page.title == "About" %}
+                <li class="menu-item current-menu-item current_page_item"><a href="/about.html" class="active">About</a></li>
+            {% else %}
+                <li class="menu-item"><a href="/about.html">About</a></li>
+            {% endif %}
 
-				<!-- li class="menu-item current-menu-item current_page_item"><a href="index.html">Home</a></li>
-				<li class="menu-item"><a href="about.html">About</a></li>
-				<li class="menu-item"><a href="tours.html">Tours</a></li>
-				<li class="menu-item"><a href="gallery.html">Gallery</a></li>
-				<li class="menu-item"><a href="contact.html">Contact</a></li -->
+            {% if page.title == "Tours" %}
+                <li class="menu-item current-menu-item current_page_item">
+                    <a href="/tours.html" class="active">Tours</a>
+            {% elsif page.group == "tours" %}
+                <li class="menu-item current-menu-ancestor current-menu-parent current_page_ancestor current_page_parent">
+                    <a href="/tours.html">Tours</a>
+            {% else %}
+                <li class="menu-item">
+                    <a href="/tours.html">Tours</a>
+            {% endif %}
+                    <ul class="sub-menu">
+
+                    {% if page.title == "798 Art District" %}
+                        <li class="menu-item current-menu-item current_page_item"><a href="/tours/798.html" class="active">798 Art District</a></li>
+                    {% else %}
+                        <li class="menu-item"><a href="/tours/798.html">798 Art District</a></li>
+                    {% endif %}
+
+                    {% if page.title == "Migrant village" %}
+                        <li class="menu-item current-menu-item current_page_item"><a href="/tours/village.html" class="active">Migrant village</a></li>
+                    {% else %}
+                        <li class="menu-item"><a href="/tours/village.html">Migrant village</a></li>
+                    {% endif %}
+                    
+                    {% if page.title == "By bike" %}
+                        <li class="menu-item current-menu-item current_page_item"><a href="/tours/bike.html" class="active">Beijing by bike</a></li>
+                    {% else %}
+                        <li class="menu-item"><a href="/tours/bike.html">Beijing by bike</a></li>
+                    {% endif %}
+
+                    {% if page.title == "Hutong tour" %}
+                        <li class="menu-item current-menu-item current_page_item"><a href="/tours/hutong.html" class="active">Hutong tour</a></li>
+                    {% else %}
+                        <li class="menu-item"><a href="/tours/hutong.html">Hutong tour</a></li>
+                    {% endif %}
+
+                    </ul>
+                </li>
+
+            {% if page.title == "Gallery" %}
+                <li class="menu-item current-menu-item current_page_item"><a href="/gallery.html" class="active">Gallery</a></li>
+            {% else %}
+                <li class="menu-item"><a href="/gallery.html">Gallery</a></li>
+            {% endif %}
+
+            {% if page.title == "Contact" %}
+                <li class="menu-item current-menu-item current_page_item"><a href="/contact.html" class="active">Contact</a></li>
+            {% else %}
+                <li class="menu-item"><a href="/contact.html">Contact</a></li>
+            {% endif %}
+
 			</ul>
 		</div>
 	</nav>
