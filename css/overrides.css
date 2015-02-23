@@ -1,3 +1,10 @@
+header #logo {
+    padding: 10px 35px 0px 35px;
+    height: 119px;
+}
+header #logo {
+    text-align: right;
+}
 #footer-wrapper,
 #header-wrapper {
     background: rgba(0,0,0,0.7);
