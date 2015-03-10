@@ -2,9 +2,14 @@
 	<div class="column_one_third column-footer-widget">
 		<ul class="footer-widget">
 			<li class="widget widget_text">
-				<h4 class="widget-title">About me</h4>
+				<h4 class="widget-title"><a href="/about.html">About Off the Wall</a></h4>
 				<div class="textwidget">
 					<p>After exploring the hidden places in Beijing with me, you understand why we need to step over a beam when entering a courtyard.</p>
+					<p>&nbsp;</p>
+				</div>
+				<h4 class="widget-title"><a href="/contact.html">Mirella Coolen</a></h4>
+				<div class="textwidget">
+					<p><a href="mailto:offthewallbeijing@hotmail.com">offthewallbeijing@hotmail.com</a></p>
 				</div>
 			</li>
 		</ul>
@@ -13,7 +18,7 @@
 	<div class="column_one_third column-footer-widget">
 		<ul class="footer-widget">
 			<li class="widget widget_recent_entries">
-				<h4 class="widget-title">Upcoming tours</h4>
+				<h4 class="widget-title"><a href="/tours.html">Upcoming tours</a></h4>
 				<ul>
     				{% for post in site.posts offset: 0 limit: 5 %}
 					<li>
@@ -29,10 +34,9 @@
 	<div class="column_one_third column-footer-widget last">
 		<ul class="footer-widget">
 			<li class="widget widget_text">
-				<h4 class="widget-title">Contact</h4>
-				<div class="textwidget">
-					<p>Mirella Coolen<br />Beijing, China<br />Tel. +86 138 1104 4827<br /><a href="mailto:offthewallbeijing@hotmail.com">offthewallbeijing@hotmail.com</a></p>
-				</div>
+                <div class="display_image">
+        			<img src="/images/gallery/general_5700.jpg" alt="">
+                </div>
 			</li>
 		</ul>
 	</div>
